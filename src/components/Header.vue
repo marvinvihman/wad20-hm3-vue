@@ -9,7 +9,7 @@
     <div class="avatar-container">
       <img :src="user.photoURL" @click="toggle = !toggle" class="avatar">
       <div v-show="toggle" class="drop-down-container">
-        <span v-show="toggle" id="user-name">{{ user.firstname }}</span>
+        <span v-show="toggle" id="user-name">{{ user.firstname }} {{user.lastname}}</span>
         <span id="user-email">{{ user.email }}</span>
         <span class="separator"></span>
         <span>
