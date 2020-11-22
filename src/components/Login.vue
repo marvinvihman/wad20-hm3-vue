@@ -43,6 +43,5 @@ name: "Login"
 }
 </script>
 
-<style scoped>
-
+<style scoped src="@/css/style.css">
 </style>
