@@ -11,6 +11,3 @@ export default {
 name: "Browse"
 }
 </script>
-
-<style scoped src="@/css/style.css">
-</style>
