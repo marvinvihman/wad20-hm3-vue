@@ -10,7 +10,7 @@ const routes = [
     component: () => import('../views/Login_page')
   },
   {
-    path: '/browse',
+    path: '/profiles',
     name: 'Browse',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

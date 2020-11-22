@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import post from "./posts"
-import browse from "./browse"
+import profiles from "./profiles"
 import user from "./user"
 
 Vue.use(Vuex)
@@ -9,7 +9,7 @@ export default function () {
     const Store = new Vuex.Store({
         modules: {
             user,
-            browse,
+            profiles,
             post
         },
         // enable strict mode (adds overhead!)
