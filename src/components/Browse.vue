@@ -1,12 +1,10 @@
 <template>
   <body>
   <section class="main-container">
-    <div v-for="profile in profiles" :key="profile.id">
-      <div class="profile">
+    <div class="profile" v-for="profile in profiles" :key="profile.id">
         <img :src="profile.avatar" :alt="profile.firstname + ' ' + profile.lastname">
         <h2>{{ profile.firstname + " " + profile.lastname }}</h2>
         <button class="follow-button" @click="followed($event.target)">Follow</button>
-      </div>
     </div>
   </section>
   </body>
