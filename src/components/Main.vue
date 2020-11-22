@@ -14,11 +14,11 @@
         </span>
         <template v-if="post.media !== null">
           <div v-if="post.media.type === 'image'" class="post-image">
-            <img :src="post.media.url" :alt="post.text">
+            <img :src="post.media.url" :alt="post.text | altText">
           </div>
           <div v-else-if="post.media.type === 'video'" class="post-image">
             <video controls>
-              <source :src="post.media.url" :alt="post.text">
+              <source :src="post.media.url" :alt="post.text | altText">
             </video>
           </div>
         </template>
@@ -41,6 +41,13 @@ import store from "@/store";
 
 export default {
   store,
+  filters: {
+    altText: function (value) {
+      if (!value) return ''
+      value = value.toString()
+      return value.toLowerCase().replace(/ /g, "-")
+    }
+  },
   computed: {
     posts(){
       return this.$store.getters["post/posts"]
