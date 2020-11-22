@@ -1,7 +1,5 @@
 <template>
   <body>
-  <header>
-  </header>
   <section class="main-container">
     <div v-for="profile in profiles" :key="profile.id">
       <div class="profile">
@@ -20,7 +18,7 @@ import store from "@/store";
 export default {
   store,
   computed: {
-    posts(){
+    profiles(){
       return this.$store.getters["profiles/profiles"]
     }
   },

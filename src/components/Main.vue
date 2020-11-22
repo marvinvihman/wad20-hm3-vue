@@ -1,7 +1,5 @@
 <template>
   <body>
-  <header>
-  </header>
   <section class="main-container">
     <div v-for="post in posts" :key="post.id">
       <div class="post">
