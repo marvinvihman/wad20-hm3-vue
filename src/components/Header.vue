@@ -17,7 +17,7 @@
             </span>
         <span class="separator"></span>
         <span>
-              <router-link to="/login">Log out</router-link>
+              <router-link to="/">Log out</router-link>
             </span>
       </div>
     </div>
