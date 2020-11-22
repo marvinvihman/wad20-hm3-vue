@@ -11,6 +11,3 @@ export default {
 name: "Main"
 }
 </script>
-
-<style scoped src="@/css/style.css">
-</style>

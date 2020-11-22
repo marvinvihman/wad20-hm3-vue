@@ -35,6 +35,3 @@ name: "Header",
 }
 
 </script>
-
-<style scoped src="@/css/style.css">
-</style>
