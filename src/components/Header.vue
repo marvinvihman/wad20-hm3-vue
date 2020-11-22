@@ -7,9 +7,9 @@
       <input type="text" name="search"><button type="button">Search</button>
     </div>
     <div class="avatar-container">
-      <img class="avatar">
-      <div class="drop-down-container">
-        <span id="user-name">John Doe</span>
+      <img @click="toggle = !toggle" class="avatar">
+      <div v-show="toggle" class="drop-down-container">
+        <span v-show="toggle" id="user-name">John Doe</span>
         <span id="user-email"></span>
         <span class="separator"></span>
         <span>
@@ -26,8 +26,14 @@
 
 <script>
 export default {
-name: "Header"
+name: "Header",
+  data(){
+    return {
+      toggle: false
+    }
+  },
 }
+
 </script>
 
 <style scoped src="@/css/style.css">

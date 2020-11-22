@@ -23,7 +23,7 @@
             <input type="password" name="password" placeholder="Password">
           </div>
           <div>
-            <button class="button" type="submit" name="login">Log In</button>
+            <button @click.stop.prevent="submit" class="button" type="submit" name="login">Log In</button>
           </div>
           <div>
             <small>
@@ -39,7 +39,12 @@
 
 <script>
 export default {
-name: "Login"
+name: "Login",
+  methods: {
+    submit(){
+      this.$router.push("/");
+    }
+  }
 }
 </script>
 
