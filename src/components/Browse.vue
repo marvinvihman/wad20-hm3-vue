@@ -5,7 +5,7 @@
       <div class="profile">
         <img :src="profile.avatar" :alt="profile.firstname + ' ' + profile.lastname">
         <h2>{{ profile.firstname + " " + profile.lastname }}</h2>
-        <button class="follow-button">Follow</button>
+        <button class="follow-button" @click="followed($event.target)">Follow</button>
       </div>
     </div>
   </section>
@@ -26,7 +26,7 @@ export default {
     this.$store.dispatch("profiles/getProfiles")
   },
   methods: {
-    liked: function(button){
+    followed: function(button){
       button.classList.toggle("followed")
     }
   },
