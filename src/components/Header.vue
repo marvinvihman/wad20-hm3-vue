@@ -7,10 +7,10 @@
       <input type="text" name="search"><button type="button">Search</button>
     </div>
     <div class="avatar-container">
-      <img @click="toggle = !toggle" class="avatar">
+      <img :src="photoURL" @click="toggle = !toggle" class="avatar">
       <div v-show="toggle" class="drop-down-container">
-        <span v-show="toggle" id="user-name">John Doe</span>
-        <span id="user-email"></span>
+        <span v-show="toggle" id="user-name">{{ username }}</span>
+        <span id="user-email">{{ email }}</span>
         <span class="separator"></span>
         <span>
               <router-link to="/browse">Browse</router-link>
@@ -25,11 +25,16 @@
 </template>
 
 <script>
+import user from '@/store/user'
+
 export default {
 name: "Header",
   data(){
     return {
-      toggle: false
+      toggle: false,
+      username: user.firstname + user.lastname,
+      email: user.email,
+      avatar: user.avatar
     }
   },
 }

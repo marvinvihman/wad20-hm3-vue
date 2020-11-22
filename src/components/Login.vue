@@ -23,7 +23,7 @@
             <input type="password" name="password" placeholder="Password">
           </div>
           <div>
-            <button @click.stop.prevent="submit" class="button" type="submit" name="login">Log In</button>
+            <button @click.stop.prevent="login" class="button" type="submit" name="login">Log In</button>
           </div>
           <div>
             <small>
@@ -38,12 +38,12 @@
 </template>
 
 <script>
+import store from '@/store'
+import { mapActions } from 'vuex'
+
 export default {
+  store,
 name: "Login",
-  methods: {
-    submit(){
-      this.$router.push("/main");
-    }
-  }
+  methods: mapActions('user', ['login'])
 }
 </script>
