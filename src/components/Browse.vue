@@ -23,7 +23,7 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch("profile/getProfiles")
+    this.$store.dispatch("profiles/getProfiles")
   },
   methods: {
     followed: function(button){
