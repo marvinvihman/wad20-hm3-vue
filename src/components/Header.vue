@@ -13,7 +13,7 @@
         <span id="user-email">{{ user.email }}</span>
         <span class="separator"></span>
         <span>
-              <router-link to="/browse">Browse</router-link>
+              <router-link to="/profiles">Browse</router-link>
             </span>
         <span class="separator"></span>
         <span>
